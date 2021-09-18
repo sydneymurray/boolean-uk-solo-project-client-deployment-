@@ -37,7 +37,7 @@
 }
 
 .register-input-container{
-  width: 600px;
+  width: 45ch;
   display: grid;
   grid-template:
   "register-label-firstname register-input-firstname" auto
@@ -45,7 +45,11 @@
   "register-label-email register-input-email" auto
   "register-label-username register-input-username" auto
   "register-label-password register-input-password" auto/
-  100px 200px;
+  12ch 25ch;
+  grid-gap: 2ch;
+  margin-left: 4ch;
+  margin-top: 2ch;
+  margin-bottom: 3ch;
 }
 
 .modalregisterbutton{
