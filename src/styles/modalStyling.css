@@ -1,0 +1,94 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2ch;
+  /* visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s opacity 0, 5s; */
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  background-color: rgb(230, 230, 230, 50);
+  border-radius: 10px;
+  padding-bottom: 3ch;
+  padding-top: 3ch;
+  grid-gap: 3ch;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 4ch;
+}
+
+.register-input-container{
+  width: 600px;
+  display: grid;
+  grid-template:
+  "register-label-firstname register-input-firstname" auto
+  "register-label-lastname register-input-lastname" auto
+  "register-label-email register-input-email" auto
+  "register-label-username register-input-username" auto
+  "register-label-password register-input-password" auto/
+  100px 200px;
+}
+
+.modalregisterbutton{
+  padding: 1ch 2ch 1ch 2ch;
+  background-color: rgb(152, 205, 248);
+  border-radius: 1rem;
+  font-weight: bold;
+  width: 20ch;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.register-input-firstname{
+grid-area: register-input-firstname;
+}
+.register-input-lastname{
+  grid-area: register-input-lastname;
+}
+.register-input-email{
+  grid-area: register-input-email;
+  }
+.register-input-username{
+  grid-area: register-input-username;
+}
+.register-input-password{
+  grid-area: register-input-password;
+}
+ 
+.register-label-firstname{
+  grid-area: register-label-firstname;
+}
+.register-label-lastname{
+  grid-area: register-label-lastname;
+}
+.register-label-email{
+  grid-area: register-label-email;
+}
+.register-label-username{
+  grid-area: register-label-username;
+}
+.register-label-password{
+  grid-area: register-label-password;
+}
+      
+    
+  

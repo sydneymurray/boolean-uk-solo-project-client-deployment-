@@ -1,0 +1,19 @@
+.activity-h2{
+  margin-top: 3;
+}
+
+.activity-item{
+  margin: 2ch; 
+  display: inline-block;
+}
+
+.activity-image{
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.activity-image:hover{
+  border: 1px solid aqua;
+  transform: scale(1.02);
+}
