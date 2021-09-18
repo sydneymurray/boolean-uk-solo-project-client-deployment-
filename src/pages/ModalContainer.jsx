@@ -2,10 +2,12 @@ import useStore from "../hooks/useStore";
 import React from "react";
 
 import RegisterModal from "../components/RegisterModal";
+import LoginModal from "../components/LoginModal";
 
 const modals = {
   "": null,
   registerCustomer: RegisterModal,
+  loginCustomer: LoginModal
 }
 
 export function ModalContainer() {
@@ -17,25 +19,4 @@ export function ModalContainer() {
   return <Modal />;
 }
 
-/*
 
-import { useStore } from "../Hooks/Store";
-import React from "react";
-
-import SignUpModal from "../components/SignUpModal";
-
-const modals = {
-  "": null,
-  newUser: SignUpModal,
-}
-
-export function ModalContainer() {
-  const modal = useStore((store) => store.modal);
-  const Modal = modals[modal];
-
-  if (!Modal) return null;
-
-  return <Modal />;
-}
-
-*/

@@ -1,5 +1,5 @@
 import registerUser from "./registerCustomer";
-import "../styles/modalStyling.css";
+import "../styles/RegisterModal.css";
 import  useStore from "../hooks/useStore";
 import { useHistory } from "react-router-dom";
 
