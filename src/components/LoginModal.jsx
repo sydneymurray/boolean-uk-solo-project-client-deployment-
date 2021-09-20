@@ -10,10 +10,11 @@ export default function ModalPopUp() {
   function loginCustomer(event){
     event.preventDefault()
 
-    const newCustomer = {
+    const customer = {
       username: event.target.username.value,
       password: event.target.password.value
     }
+    console.log(customer)
         
     //loginUser(newCustomer, history, setModal)
   }
@@ -28,7 +29,7 @@ export default function ModalPopUp() {
           <label className="login-label-password">Password:</label>
           <input className="login-input-password" type="password" name="password" required/>
         </div>
-        <button type="submit" className="modalloginbutton">Login</button>
+        <button type="submit" className="modalloginbutton" onSubmit={loginCustomer}>Login</button>
         <img className="modal-close" src="./close-button.svg" onClick={() => setModal("")} alt=""/>
       </div>
     </form>

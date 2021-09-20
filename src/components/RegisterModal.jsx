@@ -1,7 +1,7 @@
-import registerUser from "./registerCustomer";
+import registerCustomer from "./registerCustomer";
 import "../styles/RegisterModal.css";
 import  useStore from "../hooks/useStore";
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 export default function ModalPopUp() {
   const setModal = useStore((store) => store.setModal);
@@ -13,12 +13,12 @@ export default function ModalPopUp() {
     const newCustomer = {
       firstName: event.target.firstName.value,
       lastName: event.target.lastName.value,
-      username: event.target.username.value,
+      userName: event.target.userName.value,
       email: event.target.email.value,
-      password: event.target.password.value
+      password: event.target.password.value,
+      active: true
     }
-        
-    registerUser(newCustomer, history, setModal)
+    registerCustomer(newCustomer, history, setModal)
   }
 
   return <>
@@ -33,11 +33,12 @@ export default function ModalPopUp() {
           <label className="register-label-email">eMail:</label>
           <input className="register-input-email" type="email" name="email" required/>
           <label className="register-label-username">Username:</label>
-          <input className="register-input-username" type="text" name="username" required/>
+          <input className="register-input-username" type="text" name="userName" required/>
           <label className="register-label-password">Password:</label>
           <input className="register-input-password" type="password" name="password" required/>
         </div>
-        <button type="submit" className="modalregisterbutton">Register</button>
+        <button type="submit" className="modalregisterbutton" onSubmit={registerNewCustomer}>
+          Register</button>
         <img className="modal-close" src="./close-button.svg" onClick={() => setModal("")} alt=""/>
       </div>
     </form>

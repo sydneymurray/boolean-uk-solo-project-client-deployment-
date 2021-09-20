@@ -1,22 +1,20 @@
-import {REGISTER_NEW_USER} from "./data.js"
-//import { History } from "../../node_modules/@types/history/index"
-//import ModalData from "../hooks/useStore"
+import {registerURL} from "./data.js"
 
-export default function registerUser(newUser, history, setModal){
-  fetch(REGISTER_NEW_USER,{
+export default function registerCustomer(newCustomer, history, setModal){
+  fetch(registerURL,{
     credentials: "include",
     method:'POST',
     headers:{'Content-Type': 'Application/json'},
-    body: JSON.stringify(newUser)
+    body: JSON.stringify(newCustomer)
   })
   .then(res=>{
     if (res.ok) {
       setModal("")
-      history.push("/search")
-    }else setModal("signupFailed") /// Syd Do an ALERT
+      alert(`Registration Successful: Please Login with username ${newCustomer.userName}`)
+      history.push("/accounts")
+    }else alert("Incorrect Registration Details. Try using a different username.")
   })
 }
-
 
 
 

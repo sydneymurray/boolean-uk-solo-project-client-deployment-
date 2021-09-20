@@ -1,4 +1,4 @@
-import "../styles/ActivitySection.css";
+import "../styles/ActivitiesSection.css";
 
 export default function ActivitySection(){
   return <>
