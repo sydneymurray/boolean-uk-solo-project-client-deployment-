@@ -1,13 +1,15 @@
-import useStore from "../hooks/useStore";
-import React from "react";
+import useStore from "../hooks/useStore"
+import React from "react"
 
-import RegisterModal from "../components/RegisterModal";
-import LoginModal from "../components/LoginModal";
+import RegisterModal from "../components/RegisterModal"
+import LoginModal from "../components/LoginModal"
+import CustomerDetailsModal from "../components/CustomerDetailsModal"
 
 const modals = {
   "": null,
   registerCustomer: RegisterModal,
-  loginCustomer: LoginModal
+  loginCustomer: LoginModal,
+  customerDetails: CustomerDetailsModal
 }
 
 export function ModalContainer() {

@@ -1,0 +1,21 @@
+
+.account-h2{
+  display: grid;
+  grid-template:
+  "sidebar-account-type . sidebar-account-number" auto/
+  auto 1fr auto;
+  text-align: left;
+  padding-bottom: 1ch;
+}
+
+.sidebar-account-type{
+  grid-area: sidebar-account-type;
+  text-justify: left;
+}
+
+.sidebar-account-number{
+  grid-area: sidebar-account-number;  
+  text-justify: right;
+  }
+ 
+  

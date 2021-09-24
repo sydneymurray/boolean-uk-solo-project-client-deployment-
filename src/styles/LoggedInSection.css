@@ -1,34 +1,11 @@
-.loginsection-container{
+.loggedInsection-container{
   display: grid;
-  grid-template: 
-  ". login-button register-button" auto/
-  1fr auto auto;
-  
-}
-
-.loginsection-list{
-  display: inline-block;  
-}
-
-.login-button, .register-button{
-  display: inline-block;
-  padding: 1ch 2ch 1ch 2ch;
-  background-color: rgb(152, 205, 248);
-  border-radius: 1rem;
-  margin-right: 2ch;
+  grid-template-columns: auto, auto;
+  grid-gap: 2ch;
   margin-top: 1ch;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;    
+  padding-top: 3ch;
+  padding-bottom: 3ch;
 }
-
-.login-button{
- grid-area: login-button;
-} 
-
-.register-button{
-  grid-area: register-button;
-}
-
-.login-button:hover,
-.register-button:hover {
-    fill: white;
-    background-color: white;
-  }

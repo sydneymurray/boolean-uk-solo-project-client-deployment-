@@ -1,0 +1,17 @@
+.account-sidebar-container{
+  display: grid;
+  grid-template-columns: auto;
+  margin-top: 1ch;
+  background-color: rgb(240, 240, 240);
+  max-width: 200px;
+  padding: 1ch 2ch 1ch 2ch;
+}
+
+.sidebar-customer-name{
+  margin-bottom: 1ch;
+}
+
+
+
+ 
+  

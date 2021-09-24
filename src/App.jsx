@@ -3,9 +3,11 @@ import './styles/App.css';
 import Header from "./components/Header.jsx"
 import Footer from "./components/Footer.jsx"
 import LoginSection from "./components/LoginSection.jsx"
+import LogOutSection from "./components/LogOutSection.jsx"
 import FourOFour from "./components/FourOFour"
-import ActivitiesSection from "./pages/ActivitiesSection";
-import { ModalContainer } from "./pages/ModalContainer";
+import ActivitiesSection from "./pages/ActivitiesSection"
+import LoggedInSection from "./pages/LoggedInSection"
+import {ModalContainer} from "./pages/ModalContainer"
 
 function App() {
   return <>
@@ -17,9 +19,9 @@ function App() {
           <ActivitiesSection/>
         </Route>
         <Route path="/accounts" exact>
-          <LoginSection/> 
+          <LogOutSection/> 
           <Header/>
-          <ActivitiesSection/>
+          <LoggedInSection/>
         </Route>           
         <Route>
          <FourOFour/>
