@@ -18,4 +18,9 @@
   text-justify: right;
   }
  
-  
+.sidebar-account-type:hover,
+.sidebar-account-number:hover {
+  background-color: blue;
+  color: white;    
+}
+     

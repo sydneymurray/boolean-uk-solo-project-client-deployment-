@@ -1,8 +1,19 @@
 import "../styles/SideBarAccount.css"
 import useStore from "../hooks/useStore"
+import {accountStatementURL} from "./data"
 
-export default function SideBarAccount({account, index}){
-  function handleClick(){}
+export default function SideBarAccount({account}){
+  let setAccountStatement = useStore(store => store.setAccountStatement)
+
+  function handleClick(){
+    retrieveTransactions()
+    
+    function retrieveTransactions(){
+      fetch(accountStatementURL+account.accountID,{credentials: "include"})
+      .then(res=>res.json())
+      .then(transactions => setAccountStatement({account,transactions}))
+    }
+  }
 
   return <>
     <h4 className="account-h2" key={account.accountID} onClick={handleClick}>

@@ -11,6 +11,10 @@
   margin-bottom: 1ch;
 }
 
+.sidebar-customer-name:hover{
+  background-color: blue;
+  color: white;
+}
 
 
  

@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: auto, auto, 1fr, auto, auto;
   display: inline;
+  padding-bottom: 2ch;
 }
 
 .main-header{
@@ -23,6 +24,7 @@
   height: 60px;
   margin-bottom: -1.2ch;
 }
+
 .headerspacer{
   margin: 3ch;
   margin-bottom: 3ch;

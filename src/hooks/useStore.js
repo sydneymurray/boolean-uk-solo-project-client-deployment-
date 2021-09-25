@@ -8,8 +8,8 @@ const useStore = create((set, get)=>({
   modalData: {},
   setModal: (modalName, modalData) => {
     set(store => ({modal: modalName, modalData: modalData}))},
-  selectedAccount: null,
-  setSelectedAccount: account => set(state => ({selectedAccount: account})),
+  accountStatement: null,
+  setAccountStatement: statement => set(state => ({accountStatement: statement})),
 }))
 export default useStore
 

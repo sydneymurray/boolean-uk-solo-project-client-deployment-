@@ -1,6 +1,9 @@
 .loggedInsection-container{
   display: grid;
-  grid-template-columns: auto, auto;
+  grid-template:
+  "account-sidebar-container statement-section-container" auto
+  " . statement-section-container " auto/
+   auto auto;
   grid-gap: 2ch;
   margin-top: 1ch;
   max-width: 1000px;

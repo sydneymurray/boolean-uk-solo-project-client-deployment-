@@ -1,0 +1,11 @@
+.statement-section-container{
+  grid-area: statement-section-container;
+  margin-top: 1ch;
+  padding: 1ch;
+  background-color: rgb(240, 240, 240);  
+}
+
+.safe-image{
+  width: 100%;
+}
+

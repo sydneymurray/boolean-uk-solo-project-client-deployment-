@@ -20,13 +20,12 @@ export default function AccountsSideBar(){
 
   const firstName = loggedInCustomer.firstName.charAt(0).toUpperCase() + loggedInCustomer.firstName.slice(1);
   const lastName = loggedInCustomer.lastName.charAt(0).toUpperCase() + loggedInCustomer.lastName.slice(1);
-  console.log(accounts)
 
   return <>
     <section className="account-sidebar-container">
       <h2 className="sidebar-customer-name" onClick={() => setModal("customerDetails")}>
         {firstName} {lastName}</h2>    
-      {accounts.map((account, index) => <SideBarAccount key={index} account={account} index={index}/>)}    
+      {accounts.map((account, index) => <SideBarAccount key={index} account={account}/>)}    
     </section>
   </>       
 }

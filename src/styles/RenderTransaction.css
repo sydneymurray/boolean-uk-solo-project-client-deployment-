@@ -1,0 +1,16 @@
+.transaction{
+  display: grid;
+  grid-template-columns: 8ch 8ch 22ch 22ch 8ch 8ch 8ch;
+  justify-content: left;
+  grid-gap: 1ch;
+}
+
+.transaction-element{
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+
+.right{
+  text-align: right;
+}
