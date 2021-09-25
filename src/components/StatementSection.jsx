@@ -18,6 +18,15 @@ export default function StatementSection(){
 
   return <>
     <section className="statement-section-container">
+      <article className="transaction">
+        <h4 className="table-heading dark-barkground">Date</h4>
+        <h4 className="table-heading dark-barkground">Account</h4>
+        <h4 className="table-heading dark-barkground">Name</h4>
+        <h4 className="table-heading dark-barkground">Description</h4>
+        <h4 className="table-heading dark-barkground right">Paid In</h4>
+        <h4 className="table-heading dark-barkground right">Paid Out</h4>
+        <h4 className="table-heading dark-barkground right">Balance</h4>
+      </article>
       {processedStatement.map((transaction, index) =>
         <RenderTransaction transaction={transaction} key={index}/>)}
     </section>

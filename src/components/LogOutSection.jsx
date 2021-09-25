@@ -6,6 +6,7 @@ import  useStore from "../hooks/useStore"
 export default function LogOutSection(){
   const history = useHistory()
   const setLoggedInCustomer = useStore(store => store.setLoggedInCustomer)
+  const setAccountStatement = useStore(store => store.setAccountStatement)
 
   function handleLogOut(){
     fetch(logOutURL, {
@@ -14,6 +15,7 @@ export default function LogOutSection(){
       headers: {"Content-Type": "application/json"}
     })
     setLoggedInCustomer(null)
+    setAccountStatement(null)
     history.push("/")
   }
 

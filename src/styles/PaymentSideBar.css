@@ -1,5 +1,5 @@
-.account-sidebar-container{
-  grid-area: account-sidebar-container;
+.payment-sidebar-container{
+  grid-area: payment-sidebar-container;
   display: grid;
   grid-template-columns: auto;
   margin-top: 1ch;
@@ -8,15 +8,13 @@
   padding: 1ch 2ch 1ch 2ch;
 }
 
-.sidebar-customer-name{
-  margin-bottom: 1ch;
+.payment-sidebar-option{
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin:2px;
 }
 
-.sidebar-customer-name:hover{
+.payment-sidebar-option:hover{
   background-color: blue;
   color: white;
 }
-
-
- 
-  

@@ -9,3 +9,11 @@
   width: 100%;
 }
 
+.table-heading{
+  font-weight: bold;
+  font-size: large;
+  text-align: left;
+  margin-bottom: 2px;
+}
+
+

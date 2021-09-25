@@ -2,6 +2,7 @@
   display: grid;
   grid-template:
   "account-sidebar-container statement-section-container" auto
+  " payment-sidebar-container statement-section-container " auto
   " . statement-section-container " auto/
    auto auto;
   grid-gap: 2ch;

@@ -1,6 +1,6 @@
 .transaction{
   display: grid;
-  grid-template-columns: 8ch 8ch 22ch 22ch 8ch 8ch 8ch;
+  grid-template-columns: 9ch 9ch 22ch 22ch 9ch 9ch 9ch;
   justify-content: left;
   grid-gap: 1ch;
 }
@@ -10,7 +10,7 @@
   text-align: left;
 }
 
-
 .right{
   text-align: right;
 }
+
