@@ -6,19 +6,26 @@ import {useHistory} from "react-router-dom";
 export default function ModalPopUp() {
   const setModal = useStore(store => store.setModal)
   let loggedInCustomer = useStore(store => store.loggedInCustomer)
+  let setLoggedInCustomer = useStore(store => store.setLoggedInCustomer)
+
   const history = useHistory();
   
   function updateCustomer(event){
     event.preventDefault()
-
     const updatedCustomer = {
-      firstName: event.target.firstName.value,
-      lastName: event.target.lastName.value,
+      firstName: capFirstChar(event.target.firstName.value),
+      lastName: capFirstChar(event.target.lastName.value),
       userName: event.target.userName.value,
       email: event.target.email.value,
       active: true
     }
-    saveUpdatedCustomer(updatedCustomer, setModal)
+    function capFirstChar(name){  
+      return name.charAt(0).toUpperCase() + name.slice(1)
+    }
+    saveUpdatedCustomer(updatedCustomer, history, setModal)
+    loggedInCustomer.firstName = updatedCustomer.firstName
+    loggedInCustomer.lastName = updatedCustomer.lastName
+    setLoggedInCustomer(loggedInCustomer)
   }
 
   return <>

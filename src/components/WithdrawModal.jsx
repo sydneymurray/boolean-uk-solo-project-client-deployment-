@@ -13,9 +13,7 @@ export default function ModalPopUp() {
   let loggedInCustomer = useStore(store => store.loggedInCustomer)
   if (!loggedInCustomer) return <></>
   if (!accounts) return<></>
-  accounts = [
-    {type: "", accountID: "---SELECT-AN-ACCOUNT---"},
-    {type: "", accountID: "CASH PAYMENT"},...accounts]
+  accounts = [{type: "", accountID: "---SELECT-AN-ACCOUNT---"},...accounts]
 
   function retrieveAccounts(){
     fetch(accountsURL,{credentials: "include"})
@@ -27,7 +25,6 @@ export default function ModalPopUp() {
     
   const paymentData = {
     payerAccount: Number(event.target.payerAccount.value),
-    payeeAccount: Number(event.target.payeeAccount.value),
     amount: Number(event.target.amount.value),
     comments: event.target.comments.value
   }
@@ -50,10 +47,6 @@ export default function ModalPopUp() {
 
           <label className="payment-amount-label">Amount:</label>
           <input className="payment-amount-input" type="number" name="amount"
-            defaultValue="" required/>
-
-          <label className="payee-account-label">Account:</label>
-          <input className="payee-account-input" type="number" name="payeeAccount"
             defaultValue="" required/>
 
           <label className="payment-comments-label">Description:</label>

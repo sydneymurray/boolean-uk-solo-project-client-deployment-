@@ -1,4 +1,5 @@
 export default function processAccountStatement(accountStatement){
+    console.log(accountStatement)
     let processedStatement = []
     let balance=0
     for (let i = accountStatement.transactions.length-1; i > -1 ; i--){
@@ -43,16 +44,13 @@ function retrievePayerAccountName(transaction){
         transaction.accounts_accountsTotransactions_payerAccount.customers.lastName
 }
 
-function retrievePayeeAccountName(transaction){ 
+function retrievePayeeAccountName(transaction){
+    if(transaction.payeeAccount===null) return "CASH WITHDRAWAL" 
     return transaction.accounts_accountsTotransactions_payeeAccount.customers.firstName+" "+
         transaction.accounts_accountsTotransactions_payeeAccount.customers.lastName
 }
 
-
 /*
-function retrievePayerAccountName(transaction){
-  if(transaction.payeeAccount.accountID===undefined) return "CASH PAYMENT"
-  return transaction.transactions.accounts_accountsTotransactions_payerAccount.customers.firstName+
-    " "+transaction.transactions.accounts_accountsTotransactions_payerAccount.customers.lastName  
-}
+const firstName = loggedInCustomer.firstName.charAt(0).toUpperCase() + loggedInCustomer.firstName.slice(1);
+const lastName = loggedInCustomer.lastName.charAt(0).toUpperCase() + loggedInCustomer.lastName.slice(1);
 */

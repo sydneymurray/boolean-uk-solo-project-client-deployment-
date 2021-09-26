@@ -5,8 +5,8 @@ import RegisterModal from "../components/RegisterModal"
 import LoginModal from "../components/LoginModal"
 import CustomerDetailsModal from "../components/CustomerDetailsModal"
 import PaymentModal from "../components/PaymentModal"
-import PayInModal from "../components/PayInModal"
-import LoanModal from "../components/LoanModal"
+import WithdrawModal from "../components/WithdrawModal"
+//import LoanModal from "../components/LoanModal"
 
 const modals = {
   "": null,
@@ -14,8 +14,8 @@ const modals = {
   loginCustomer: LoginModal,
   customerDetails: CustomerDetailsModal,
   payment: PaymentModal,
-  payIn: PayInModal,
-  loan: LoanModal,
+  withdraw: WithdrawModal,
+//  loan: LoanModal,
 }
 
 export function ModalContainer() {

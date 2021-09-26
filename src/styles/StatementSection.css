@@ -2,7 +2,8 @@
   grid-area: statement-section-container;
   margin-top: 1ch;
   padding: 1ch;
-  background-color: rgb(240, 240, 240);  
+  background-color: rgb(240, 240, 240); 
+  overflow: auto;
 }
 
 .safe-image{

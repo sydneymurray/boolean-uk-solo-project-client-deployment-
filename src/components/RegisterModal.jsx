@@ -11,12 +11,15 @@ export default function ModalPopUp() {
     event.preventDefault()
 
     const newCustomer = {
-      firstName: event.target.firstName.value,
-      lastName: event.target.lastName.value,
+      firstName: capFirstChar(event.target.firstName.value),
+      lastName: capFirstChar(event.target.lastName.value),
       userName: event.target.userName.value,
       email: event.target.email.value,
       password: event.target.password.value,
       active: true
+    }
+    function capFirstChar(name){  
+      return name.charAt(0).toUpperCase() + name.slice(1)
     }
     registerCustomer(newCustomer, setModal)
   }
@@ -46,20 +49,11 @@ export default function ModalPopUp() {
 }
 
 /*
-  function registerNewCustomer(event){
-    event.preventDefault();
-    const {
-      formalName: name,
-      username: username,
-      email: email,
-      password: password,
-    } = event.target
+  const firstName = loggedInCustomer.firstName.charAt(0).toUpperCase() + loggedInCustomer.firstName.slice(1);
+  const lastName = loggedInCustomer.lastName.charAt(0).toUpperCase() + loggedInCustomer.lastName.slice(1);
 
-    const newUser = {
-      name: name.value,
-      username: username.value,
-      email: email.value,
-      password: password.value
-    }
+capFirstChar(name){  
+  return name.charAt(0).toUpperCase() + name.slice(1)
+}
 */
 

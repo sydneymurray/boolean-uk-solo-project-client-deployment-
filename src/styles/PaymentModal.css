@@ -39,7 +39,8 @@
   grid-template:
   "payment-account-label payment-account-selection" auto
   "payment-amount-label payment-amount-input" auto
-  "payee-account-label payee-account-input" auto/
+  "payee-account-label payee-account-input" auto
+  "payment-comments-label payment-comments-input" auto/
   12ch 25ch;
   grid-gap: 2ch;
   margin-left: 4ch;
