@@ -18,9 +18,8 @@
   text-justify: right;
   }
  
-.sidebar-account-type:hover,
-.sidebar-account-number:hover {
+.sidebar-account-number:hover,
+.sidebar-account-type:hover{
   background-color: blue;
   color: white;    
 }
-     

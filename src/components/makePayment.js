@@ -7,17 +7,21 @@ export default async function makePayment(transactionData, history, setModal) {
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify(transactionData)
   })
-  console.log(dbResponse.status)  
   if (dbResponse.ok){
     setModal("")
     alert("Payment Succesful")  
     history.push("/accounts")
   } 
   else {
-    if (dbResponse.status===404) 
+    if (dbResponse.status===404){ 
       alert(`Payee Account ${transactionData.payeeAccount} Does Not Exist.`)
-    else
-      alert("An Error Occurred.")   
+      return
+    }
+    if (dbResponse.status===901){ 
+      alert(`Payment Unsuccesful. Insuffient Funds.`)
+      return
+    }
+    alert("An Error Occurred.")   
   }
 }
 

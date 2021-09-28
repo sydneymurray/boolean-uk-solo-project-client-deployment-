@@ -9,9 +9,13 @@ export default function SideBarAccount({account}){
     retrieveTransactions()
     
     function retrieveTransactions(){
-      fetch(accountStatementURL+account.accountID,{credentials: "include"})
-      .then(res=>res.json())
-      .then(transactions => setAccountStatement({account,transactions}))
+      console.log(account.accountID)
+      fetch(accountStatementURL,{
+        method:"GET",
+        headers:{accountid: account.accountID},
+        credentials: "include"})
+        .then(res=>res.json())
+        .then(transactions => setAccountStatement({account,transactions}))
     }
   }
 
@@ -22,4 +26,7 @@ export default function SideBarAccount({account}){
     </h4>
   </>       
 }
+
+
+
 

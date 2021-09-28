@@ -36,20 +36,4 @@ function App() {
 export default App;
 
 
-/*
 
-    <Switch>
-      <Route path="/" exact>
-        <MainPage/>
-        <MenuButtons/>
-      </Route>           
-
-      <Route>
-         <FourOFour/>
-      </Route>
-    </Switch>
-
-    <ModalContainer />
-
-    
-*/

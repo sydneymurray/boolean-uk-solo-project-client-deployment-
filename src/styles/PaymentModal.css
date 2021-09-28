@@ -58,25 +58,6 @@
   margin-right: auto
 }
 
-.payment-account-label{
-grid-area: payment-account-label;
-}
-.payment-account-selection{
-  grid-area: payment-account-selection;
-}
-.payment-amount-label{
-  grid-area: payment-amount-label;
-  }
-.payment-amount-input{
-  grid-area: payment-amount-input;
-}
-.payee-account-label{
-  grid-area: payee-account-label;
-}
-.payee-account-input{
-  grid-area: payee-account-input;
-}
-
 .modal-pay-button:hover {
   fill: white;
   background-color: white;

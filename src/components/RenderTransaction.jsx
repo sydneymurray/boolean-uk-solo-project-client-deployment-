@@ -1,8 +1,6 @@
 import "../styles/RenderTransaction.css"
 
-
 export default function RenderTransaction({transaction}){
-console.log(transaction.date)
 return <>
     <article className="transaction">
       <span className="transaction-element">{transaction.date}</span>

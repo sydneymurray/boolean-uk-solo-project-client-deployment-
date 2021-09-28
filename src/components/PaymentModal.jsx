@@ -4,15 +4,19 @@ import {accountsURL} from "./data";
 import  useStore from "../hooks/useStore"
 import {useEffect, useState} from "react"
 import makePayment from "./makePayment"
+import {accountStatementURL} from "./data"
 
 export default function ModalPopUp() {
-  let [accounts, setAccounts] = useState(null)
-  const history = useHistory()
-  useEffect(retrieveAccounts,[])
   const setModal = useStore(store => store.setModal)
+  const history = useHistory()
+  let setAccountStatement = useStore(store => store.setAccountStatement)
+  let accountStatement = useStore(store => store.accountStatement)
+  
+  let [accounts, setAccounts] = useState(null)
+  useEffect(retrieveAccounts,[])
+
   let loggedInCustomer = useStore(store => store.loggedInCustomer)
-  if (!loggedInCustomer) return <></>
-  if (!accounts) return<></>
+  if (!loggedInCustomer || !accounts) return <></>
   accounts = [
     {type: "", accountID: "---SELECT-AN-ACCOUNT---"},
     {type: "", accountID: "CASH PAYMENT"},...accounts]
@@ -22,22 +26,31 @@ export default function ModalPopUp() {
     .then(res=>res.json())
     .then(accounts => setAccounts(accounts))
   }
-  function handleSubmit(event){
+
+  function handleSubmit(event, setAccountStatement, accountStatement){
     event.preventDefault()
-    
-  const paymentData = {
-    payerAccount: Number(event.target.payerAccount.value),
-    payeeAccount: Number(event.target.payeeAccount.value),
-    amount: Number(event.target.amount.value),
-    comments: event.target.comments.value
-  }
+    const paymentData = {
+      payerAccount: Number(event.target.payerAccount.value),
+      payeeAccount: Number(event.target.payeeAccount.value),
+      amount: Number(event.target.amount.value),
+      comments: event.target.comments.value
+    }
+    makePayment(paymentData, history, setModal)
 
-  makePayment(paymentData, history, setModal)
+    if (!accountStatement.account) return
+    retrieveTransactions(setAccountStatement, accountStatement.account)
 
+    function retrieveTransactions(setAccountStatement, account){
+    fetch(accountStatementURL+account.accountID,{credentials: "include"})
+      .then(res=>res.json())
+      .then(transactions=>setAccountStatement({account, transactions}))
+    }
   }
 
   return <>
-    <form onSubmit={handleSubmit} className="modal-background">
+    <form className="modal-background" onSubmit={event=>{
+      handleSubmit(event, setAccountStatement, accountStatement)}}>
+
       <div className="modal">
         <h1>Make A Payment</h1>
         <div className="pay-modal-container">
@@ -61,8 +74,10 @@ export default function ModalPopUp() {
             defaultValue="" required/>
 
         </div>
-        <button type="submit" className="modal-pay-button" onSubmit={handleSubmit}>
+
+        <button type="submit" className="modal-pay-button">
           Pay</button>
+
         <img className="modal-close" src="./close-button.svg" onClick={() => setModal("")} alt=""/>
       </div>
     </form>
@@ -71,3 +86,27 @@ export default function ModalPopUp() {
 }
 
 
+/*
+
+  function handleSubmit(event, setAccountStatement, accountStatement){
+    event.preventDefault()
+    const paymentData = {
+      payerAccount: Number(event.target.payerAccount.value),
+      payeeAccount: Number(event.target.payeeAccount.value),
+      amount: Number(event.target.amount.value),
+      comments: event.target.comments.value
+    }
+    makePayment(paymentData, history, setModal)
+
+    if (!accountStatement) return
+    retrieveTransactions(accountStatement.account.accountID)
+
+    async function retrieveTransactions(accountID, setAccountStatement, accountStatement){
+    let dbResponse = await fetch(accountStatementURL+accountID,{credentials: "include"})
+    console.log(dbResponse)
+    // setAccountStatement({account,transactions})  
+    }
+  }
+
+
+*/

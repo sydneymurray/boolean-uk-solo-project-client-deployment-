@@ -7,10 +7,10 @@ import {accountsURL} from "./data"
 export default function AccountsSideBar(){
   let [accounts, setAccounts] = useState(null)
   useEffect(retrieveAccounts,[])
+
   const setModal = useStore(store => store.setModal)
   let loggedInCustomer = useStore(store => store.loggedInCustomer)
-  if (!loggedInCustomer) return <></>
-  if (!accounts) return<></>
+  if (!loggedInCustomer || !accounts) return <></>
 
   function retrieveAccounts(){
     fetch(accountsURL,{credentials: "include"})
@@ -27,7 +27,3 @@ export default function AccountsSideBar(){
   </>       
 }
 
-/*
-const firstName = loggedInCustomer.firstName.charAt(0).toUpperCase() + loggedInCustomer.firstName.slice(1);
-const lastName = loggedInCustomer.lastName.charAt(0).toUpperCase() + loggedInCustomer.lastName.slice(1);
-*/

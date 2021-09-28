@@ -6,6 +6,7 @@
   background-color: rgb(240, 240, 240);
   width: 200px;
   padding: 1ch 2ch 1ch 2ch;
+  grid-gap: 0.8ch;
 }
 
 .payment-sidebar-option{
