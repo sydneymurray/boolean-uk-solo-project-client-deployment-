@@ -17,7 +17,8 @@ export default function AccountsSideBar(){
     .then(res=>res.json())
     .then(accounts => setAccounts(accounts))
   }
-
+  if(!accounts) return <></>
+  
   return <>
     <section className="account-sidebar-container">
       <h2 className="sidebar-customer-name" onClick={() => setModal("customerDetails")}>
