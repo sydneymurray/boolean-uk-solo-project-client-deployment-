@@ -1,4 +1,4 @@
-import "../styles/PaymentModal.css"
+import "../styles/PaymentSuccessModal.css"
 import {useHistory} from "react-router-dom"
 import {accountsURL} from "./data";
 import  useStore from "../hooks/useStore"
@@ -35,9 +35,18 @@ export default function ModalPopUp() {
       amount: Number(event.target.amount.value),
       comments: event.target.comments.value
     }
-    makePayment(paymentData, history, setModal, setAccountStatement, accountStatement)
+    makePayment(paymentData, history, setModal)
+
+    if (!accountStatement.account) return
+    retrieveTransactions(setAccountStatement, accountStatement.account)
+
+    function retrieveTransactions(setAccountStatement, account){
+    fetch(accountStatementURL+account.accountID,{credentials: "include"})
+      .then(res=>res.json())
+      .then(transactions=>setAccountStatement({account, transactions}))
+    }
   }
-    
+
   return <>
     <form className="modal-background" onSubmit={event=>{
       handleSubmit(event, setAccountStatement, accountStatement)}}>
@@ -78,6 +87,7 @@ export default function ModalPopUp() {
 
 
 /*
+
   function handleSubmit(event, setAccountStatement, accountStatement){
     event.preventDefault()
     const paymentData = {
@@ -88,19 +98,15 @@ export default function ModalPopUp() {
     }
     makePayment(paymentData, history, setModal)
 
-    if (!accountStatement.account) return
-    retrieveTransactions(setAccountStatement, accountStatement.account)
+    if (!accountStatement) return
+    retrieveTransactions(accountStatement.account.accountID)
 
-    function retrieveTransactions(setAccountStatement, account){
-      fetch(accountStatementURL,{
-        method:"GET",
-        headers:{accountid: account.accountID},
-        credentials: "include"})
-        .then(res=>res.json())
-        .then(transactions => {
-          console.log(transactions)
-          setAccountStatement({account,transactions})})
+    async function retrieveTransactions(accountID, setAccountStatement, accountStatement){
+    let dbResponse = await fetch(accountStatementURL+accountID,{credentials: "include"})
+    console.log(dbResponse)
+    // setAccountStatement({account,transactions})  
     }
   }
+
 
 */
