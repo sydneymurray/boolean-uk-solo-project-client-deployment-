@@ -1,11 +1,9 @@
 import registerCustomer from "./registerCustomer";
 import "../styles/RegisterModal.css";
 import  useStore from "../hooks/useStore";
-import {useHistory} from "react-router-dom";
 
 export default function ModalPopUp() {
   const setModal = useStore((store) => store.setModal);
-  const history = useHistory();
   
   function registerNewCustomer(event){
     event.preventDefault()

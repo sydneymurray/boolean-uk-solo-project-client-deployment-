@@ -4,7 +4,6 @@ import {accountsURL} from "./data";
 import  useStore from "../hooks/useStore"
 import {useEffect, useState} from "react"
 import makePayment from "./makePayment"
-import {accountStatementURL} from "./data"
 
 export default function ModalPopUp() {
   const setModal = useStore(store => store.setModal)
