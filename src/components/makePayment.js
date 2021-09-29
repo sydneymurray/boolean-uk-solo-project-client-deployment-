@@ -17,7 +17,7 @@ export default function makePayment(transactionData, history, setModal, setAccou
     setModal("")
     alert("Payment Succesful")
     accountStatement.transactions = [dbResponse, ...accountStatement.transactions]
-    setTimeout(() => setAccountStatement(accountStatement), 5000)
+    setAccountStatement(accountStatement)
     //history.push("/accounts")
   })
 }
