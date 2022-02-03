@@ -11,7 +11,7 @@ export default function LoggedInSection(){
 
   return <>
     <section className="loggedInsection-container">
-
+      <AccountsSideBar/>
     </section>
   </>       
 }
@@ -19,7 +19,6 @@ export default function LoggedInSection(){
 
 /*
 
-<AccountsSideBar/>
       <PaymentSideBar/>
       <StatementSection/>  
 
