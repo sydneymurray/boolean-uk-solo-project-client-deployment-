@@ -15,7 +15,6 @@ export default function ModalPopUp() {
       userName: event.target.userName.value,
       password: event.target.password.value
     }
-    console.log("Login customer")
     loginCustomer(customer, history, setModal, setLoggedInCustomer)    
   }
 
