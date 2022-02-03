@@ -2,11 +2,10 @@ import "../styles/PaymentSideBar.css"
 import useStore from "../hooks/useStore"
 
 export default function PaymentSideBar(){
-  console.log("Paymests")
   const setModal = useStore(store => store.setModal)
   let loggedInCustomer = useStore(store => store.loggedInCustomer)
   if (!loggedInCustomer) return <></>
-
+  console.log("Payments")
   return <>
     <section className="payment-sidebar-container">
       <span className="payment-sidebar-option" onClick={()=>setModal("newAccount")}>Create New Account</span> 
