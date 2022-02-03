@@ -1,4 +1,33 @@
 import create from "zustand"
+import {accountsURL, updateCustomerURL} from "../components/data"
+
+const useStore = create((set, get)=>({
+  loggedInCustomer: null,
+  setLoggedInCustomer: customer => set(state => ({loggedInCustomer: customer})),
+  accounts: null,
+  retrieveAccounts(){
+    fetch(accountsURL,{credentials: "include"})
+    .then(res=>res.json())
+    .then(accounts => set({accounts}))
+  },
+  retrieveLoggedInCustomer(){
+    fetch(updateCustomerURL,{credentials: "include"})
+    .then(res=>res.json())
+    .then(loggedInCustomer => set({loggedInCustomer}))
+  },
+  modal: "",
+  modalData: {},
+  setModal: (modalName, modalData) => {
+    set(store => ({modal: modalName, modalData: modalData}))},
+  accountStatement: null,
+  setAccountStatement: statement => set(state => ({accountStatement: statement})),
+  addTransaction: transaction => set(state => ({...state.accountStatement,
+    transactions: [transaction, ...state.accountStatement.transactions]})),
+}))
+export default useStore
+
+/*
+import create from "zustand"
 
 const useStore = create((set, get)=>({
   loggedInCustomer: null,
@@ -11,4 +40,4 @@ const useStore = create((set, get)=>({
   setAccountStatement: statement => set(state => ({accountStatement: statement})),
 }))
 export default useStore
-
+*/
