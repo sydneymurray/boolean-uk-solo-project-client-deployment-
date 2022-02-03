@@ -4,7 +4,6 @@ import RenderTransaction from "./RenderTransaction"
 import processAccountStatement from "./processAccountStatement"
 
 export default function StatementSection(){
-  console.log("Statement")
   let accountStatement = useStore(store => store.accountStatement)
 
   if (!accountStatement) return <>
@@ -14,7 +13,7 @@ export default function StatementSection(){
     </> 
 
   let processedStatement = processAccountStatement(accountStatement)
-
+  console.log("Statement")
   return <>
     <section className="statement-section-container">
       <article className="transaction">

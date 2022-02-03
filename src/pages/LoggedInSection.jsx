@@ -6,7 +6,6 @@ import useStore from "../hooks/useStore"
 import {useEffect} from "react"
 
 export default function LoggedInSection(){
-  console.log("Logged In Section")
   let retrieveAccounts = useStore(store => store.retrieveAccounts)
   useEffect(retrieveAccounts)
 
