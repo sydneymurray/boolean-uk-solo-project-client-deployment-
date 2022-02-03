@@ -8,9 +8,9 @@ import {useEffect} from "react"
 export default function LoggedInSection(){
   let retrieveAccounts = useStore(store => store.retrieveAccounts)
   useEffect(retrieveAccounts)
-  let dummy = null
-  dummy = retrieveAccounts 
-  retrieveAccounts  = dummy
+  //let dummy = null
+  //dummy = retrieveAccounts 
+  //retrieveAccounts  = dummy
 
   return <>
     <section className="loggedInsection-container">
