@@ -1,5 +1,5 @@
 import "../styles/LoggedInSection.css"
-//import AccountsSideBar from "../components/AccountsSideBar"
+import AccountsSideBar from "../components/AccountsSideBar"
 //import PaymentSideBar from "../components/PaymentSideBar"
 //import StatementSection from "../components/StatementSection"
 import useStore from "../hooks/useStore"
