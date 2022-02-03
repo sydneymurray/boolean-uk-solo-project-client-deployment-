@@ -10,7 +10,6 @@ export default async function loginCustomer(customer, history, setModal, setLogg
   if (dbResponse.ok){
     setModal("")  
     let customerDetails = await dbResponse.json()
-    console.log(customerDetails)
     setLoggedInCustomer(customerDetails)  
     history.push("/accounts")
   } else alert("Incorrect Login Details.")   

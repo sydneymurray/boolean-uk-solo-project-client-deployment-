@@ -4,6 +4,7 @@ import RenderTransaction from "./RenderTransaction"
 import processAccountStatement from "./processAccountStatement"
 
 export default function StatementSection(){
+  console.log("Statement")
   let accountStatement = useStore(store => store.accountStatement)
 
   if (!accountStatement) return <>

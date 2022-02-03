@@ -3,6 +3,7 @@ import useStore from "../hooks/useStore"
 import SideBarAccount from "./SideBarAccount"
 
 export default function AccountsSideBar(){
+  console.log("Accounts")
   const setModal = useStore(store => store.setModal)
   let accounts = useStore(store => store.accounts)
   let loggedInCustomer = useStore(store => store.loggedInCustomer)
