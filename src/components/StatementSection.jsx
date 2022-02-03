@@ -4,9 +4,9 @@ import RenderTransaction from "./RenderTransaction"
 import processAccountStatement from "./processAccountStatement"
 
 export default function StatementSection(){
-  return<></>
   let accountStatement = useStore(store => store.accountStatement)
 
+  if (1) return<></>
   if (!accountStatement) return <>
       <section className="statement-section-container">
         <img className="safe-image" src="./images/MoneySafe.jpeg" alt="Safe"/>

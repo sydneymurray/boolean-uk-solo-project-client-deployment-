@@ -8,6 +8,7 @@ export default function AccountsSideBar(){
   let loggedInCustomer = useStore(store => store.loggedInCustomer)
   let retrieveLoggedInCustomer = useStore(store => store.retrieveLoggedInCustomer)
 
+  if (1) return<></>
   if (!accounts || accounts.err==='Not Logged In') return <></>
   console.log("Accounts Sidebar")
   if (!loggedInCustomer) {

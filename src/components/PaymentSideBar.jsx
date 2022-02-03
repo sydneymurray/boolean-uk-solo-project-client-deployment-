@@ -2,9 +2,10 @@ import "../styles/PaymentSideBar.css"
 import useStore from "../hooks/useStore"
 
 export default function PaymentSideBar(){
-  return<></>
+
   const setModal = useStore(store => store.setModal)
   let loggedInCustomer = useStore(store => store.loggedInCustomer)
+  if (1) return<></>
   if (!loggedInCustomer) return <></>
   console.log("Payments")
   return <>
