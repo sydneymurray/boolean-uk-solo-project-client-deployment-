@@ -21,12 +21,12 @@ const modals = {
 }
 
 export function ModalContainer() {
-  const modal = useStore((store) => store.modal);
-  const Modal = modals[modal];
+  const modal = useStore((store) => store.modal)
+  const Modal = modals[modal]
 
-  if (!Modal) return null;
-
-  return <Modal />;
+  if (!Modal) return null
+  //if (!Modal) history.push("/accounts") 
+  return <Modal />
 }
 
 

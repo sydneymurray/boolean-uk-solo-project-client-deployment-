@@ -12,30 +12,11 @@ export default function ModalPopUp() {
   let setAccountStatement = useStore(store => store.setAccountStatement)
   let accountStatement = useStore(store => store.accountStatement)
   
-  let [accounts, setAccounts] = useState(null)
-  useEffect(retrieveAccounts,[])
-
-  let loggedInCustomer = useStore(store => store.loggedInCustomer)
-  if (!loggedInCustomer || !accounts) return <></>
-  accounts = [
-    {type: "", accountID: "---SELECT-AN-ACCOUNT---"},
-    {type: "", accountID: "CASH PAYMENT"},...accounts]
-
-  function retrieveAccounts(){
-    fetch(accountsURL,{credentials: "include"})
-    .then(res=>res.json())
-    .then(accounts => setAccounts(accounts))
-  }
 
   function handleSubmit(event, setAccountStatement, accountStatement){
     event.preventDefault()
-    const paymentData = {
-      payerAccount: Number(event.target.payerAccount.value),
-      payeeAccount: Number(event.target.payeeAccount.value),
-      amount: Number(event.target.amount.value),
-      comments: event.target.comments.value
+
     }
-    makePayment(paymentData, history, setModal)
 
     if (!accountStatement.account) return
     retrieveTransactions(setAccountStatement, accountStatement.account)
@@ -86,27 +67,3 @@ export default function ModalPopUp() {
 }
 
 
-/*
-
-  function handleSubmit(event, setAccountStatement, accountStatement){
-    event.preventDefault()
-    const paymentData = {
-      payerAccount: Number(event.target.payerAccount.value),
-      payeeAccount: Number(event.target.payeeAccount.value),
-      amount: Number(event.target.amount.value),
-      comments: event.target.comments.value
-    }
-    makePayment(paymentData, history, setModal)
-
-    if (!accountStatement) return
-    retrieveTransactions(accountStatement.account.accountID)
-
-    async function retrieveTransactions(accountID, setAccountStatement, accountStatement){
-    let dbResponse = await fetch(accountStatementURL+accountID,{credentials: "include"})
-    console.log(dbResponse)
-    // setAccountStatement({account,transactions})  
-    }
-  }
-
-
-*/

@@ -46,12 +46,4 @@ export default function ModalPopUp() {
   </>
 }
 
-/*
-  const firstName = loggedInCustomer.firstName.charAt(0).toUpperCase() + loggedInCustomer.firstName.slice(1);
-  const lastName = loggedInCustomer.lastName.charAt(0).toUpperCase() + loggedInCustomer.lastName.slice(1);
-
-capFirstChar(name){  
-  return name.charAt(0).toUpperCase() + name.slice(1)
-}
-*/
 

@@ -1,10 +1,10 @@
 import "../styles/CreatNewAccountModal.css"
-import {useHistory} from "react-router-dom"
 import  useStore from "../hooks/useStore"
 import createNewAccount from "./createNewAccount";
 
 export default function ModalPopUp() {
-  let history = useHistory()  
+
+  const retrieveAccounts = useStore(store => store.retrieveAccounts)
   const setModal = useStore(store => store.setModal)
   let loggedInCustomer = useStore(store => store.loggedInCustomer)
   if (!loggedInCustomer) return <></>
@@ -14,8 +14,7 @@ export default function ModalPopUp() {
     const accountData = {
       type: event.target.accountType.value
     }
-    createNewAccount(accountData, history, setModal)
-
+    createNewAccount(accountData, setModal, retrieveAccounts)
   }
   return <>
     <form onSubmit={handleSubmit} className="modal-background">
@@ -38,7 +37,8 @@ export default function ModalPopUp() {
       </div>
     </form>
   </>
-
 }
+
+
 
 

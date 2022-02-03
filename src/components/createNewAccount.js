@@ -1,6 +1,6 @@
 import {accountsURL} from "./data.js"
 
-export default function createNewAccount(newAccount, history, setModal){
+export default function createNewAccount(newAccount, setModal, retrieveAccounts){
   fetch(accountsURL,{
     credentials: "include",
     method:'POST',
@@ -11,9 +11,9 @@ export default function createNewAccount(newAccount, history, setModal){
     if (resp.ok) {
       setModal("")
       alert(`New Account Successfully Created`)
+      retrieveAccounts()
     } else alert("Account Creation Was Unsuccessful")
   })
 }
-
 
 
