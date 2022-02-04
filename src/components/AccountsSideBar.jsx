@@ -13,6 +13,7 @@ export default function AccountsSideBar(){
     retrieveLoggedInCustomer()
     return <></>
   }
+  
   console.log(loggedInCustomer)
   return <>
     <section className="account-sidebar-container">
