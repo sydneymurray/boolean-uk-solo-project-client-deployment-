@@ -20,24 +20,9 @@ const useStore = create((set, get)=>({
   setModal: (modalName, modalData) => {
     set(store => ({modal: modalName, modalData: modalData}))},
   accountStatement: null,
-  setAccountStatement: statement => set(state => ({accountStatement: statement})),
+  setAccountStatement: statement => set(() => ({accountStatement: statement})),
   addTransaction: transaction => set(state => ({...state.accountStatement,
     transactions: [transaction, ...state.accountStatement.transactions]})),
 }))
 export default useStore
 
-/*
-import create from "zustand"
-
-const useStore = create((set, get)=>({
-  loggedInCustomer: null,
-  setLoggedInCustomer: customer => set(state => ({loggedInCustomer: customer})),
-  modal: "",
-  modalData: {},
-  setModal: (modalName, modalData) => {
-    set(store => ({modal: modalName, modalData: modalData}))},
-  accountStatement: null,
-  setAccountStatement: statement => set(state => ({accountStatement: statement})),
-}))
-export default useStore
-*/
