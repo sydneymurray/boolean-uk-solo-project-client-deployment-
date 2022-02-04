@@ -13,7 +13,7 @@ export default function AccountsSideBar(){
     retrieveLoggedInCustomer()
     return <></>
   }
-
+  console.log(loggedInCustomer)
   return <>
     <section className="account-sidebar-container">
       <h2 className="sidebar-customer-name" onClick={() => setModal("customerDetails")}>
