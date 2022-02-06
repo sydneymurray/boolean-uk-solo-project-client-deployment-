@@ -13,6 +13,7 @@ export default function saveUpdatedCustomer(updatedCustomer, setModal, loggedInC
       alert(`Update Successful`)
       updatedCustomer.customerID = loggedInCustomer.customerID
       setLoggedInCustomer(updatedCustomer)
+      console.log(updatedCustomer)
     } else alert("Update unsuccessful. Try a different username")
   })
 }
