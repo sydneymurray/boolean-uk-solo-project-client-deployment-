@@ -10,10 +10,10 @@ export default function saveUpdatedCustomer(updatedCustomer, setModal, loggedInC
   .then(resp=>{
     if (resp.ok) {
       setModal("")
-      alert(`Update Successful`)
       updatedCustomer.customerID = loggedInCustomer.customerID
       setLoggedInCustomer(updatedCustomer)
       console.log(updatedCustomer)
+      alert(`Update Successful`)
     } else alert("Update unsuccessful. Try a different username")
   })
 }
