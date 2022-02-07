@@ -4,7 +4,7 @@ import makePayment from "./makePayment"
 
 export default function ModalPopUp() {
   const setModal = useStore(store => store.setModal)
-  let setAccountStatement = useStore(store => store.setAccountStatement)
+  const setAccountStatement = useStore(store => store.setAccountStatement)
   let accountStatement = useStore(store => store.accountStatement)
   let accounts = useStore(store => store.accounts)
   let loggedInCustomer = useStore(store => store.loggedInCustomer)

@@ -6,8 +6,6 @@ export default function ModalPopUp() {
   const setModal = useStore(store => store.setModal)
   const setLoggedInCustomer = useStore(store => store.setLoggedInCustomer)
   let loggedInCustomer = useStore(store => store.loggedInCustomer)
-  
-  console.log(loggedInCustomer)
 
   function updateCustomer(event){
     event.preventDefault()
