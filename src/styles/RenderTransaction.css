@@ -3,7 +3,7 @@
   grid-template-columns: 9ch 9ch 22ch 22ch 9ch 9ch 9ch;
   justify-content: left;
   grid-gap: 1ch;
-  width: auto;
+  width: fit-content;
   border-bottom-color: white;
   border-bottom-width: 2px;
   border-bottom-style: solid;

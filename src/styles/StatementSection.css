@@ -20,7 +20,7 @@
 
 @media screen and (max-width: 1020px) {
   .statement-section-container{
-    width: 45ch;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
 
