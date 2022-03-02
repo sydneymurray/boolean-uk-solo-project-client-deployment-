@@ -1,13 +1,9 @@
 // NOT YET IMPLEMENTED
-
 import "../styles/LoanModal.css";
-import {accountsURL} from "./data";
 import  useStore from "../hooks/useStore";
-import {useEffect, useState} from "react";
 
 export default function ModalPopUp() {
   const setModal = useStore((store) => store.setModal)
-
 
   return <>
     <form className="modal-background">
