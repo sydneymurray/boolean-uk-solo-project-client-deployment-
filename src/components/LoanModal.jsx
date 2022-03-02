@@ -4,7 +4,8 @@ import  useStore from "../hooks/useStore";
 
 export default function ModalPopUp() {
   const setModal = useStore((store) => store.setModal)
-
+  console.log("Loan Moadal Selected")
+  
   return <>
     <form className="modal-background">
       <div className="modal">
