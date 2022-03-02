@@ -7,7 +7,7 @@ import CustomerDetailsModal from "../components/CustomerDetailsModal"
 import PaymentModal from "../components/PaymentModal"
 import WithdrawModal from "../components/WithdrawModal"
 import CreateNewAccountModal from "../components/CreateNewAccountModal"
-//import LoanModal from "../components/LoanModal"
+import LoanModal from "../components/LoanModal"
 
 const modals = {
   "": null,
@@ -16,8 +16,8 @@ const modals = {
   customerDetails: CustomerDetailsModal,
   payment: PaymentModal,
   withdraw: WithdrawModal,
-  newAccount: CreateNewAccountModal
-  // loan: LoanModal,
+  newAccount: CreateNewAccountModal,
+  loan: LoanModal
 }
 
 export function ModalContainer() {
