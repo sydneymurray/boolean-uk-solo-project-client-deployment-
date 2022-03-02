@@ -5,11 +5,11 @@ import  useStore from "../hooks/useStore";
 export default function ModalPopUp() {
   const setModal = useStore((store) => store.setModal)
   console.log("Loan Moadal Selected")
-  
+
   return <>
     <form className="modal-background">
       <div className="modal">
-        <h1>NOT YET IMPLEMENTED</h1>
+        <h1 className="not-implemented-h1">NOT YET IMPLEMENTED</h1>
 
         <button type="submit" className="modalregisterbutton">
           Update</button>
