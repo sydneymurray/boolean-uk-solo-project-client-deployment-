@@ -8,7 +8,6 @@ import PaymentModal from "../components/PaymentModal"
 import WithdrawModal from "../components/WithdrawModal"
 import CreateNewAccountModal from "../components/CreateNewAccountModal"
 import LoanModal from "../components/LoanModal"
-//import LoanModal from "../components/LoanModal.jsx"
 
 const modals = {
   "": null,
