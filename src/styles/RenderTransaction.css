@@ -18,6 +18,12 @@
   text-align: right;
 }
 
+@media screen and (max-width: 1300px) {
+  .transaction{
+    grid-template-columns: 9ch 9ch 22ch 22ch 9ch 9ch;
+  }
+}
+
 @media screen and (max-width: 1020px) {
   .transaction{
     grid-template-columns: 9ch 13ch 9ch 9ch;

@@ -18,12 +18,17 @@
   margin-bottom: 2px;
 }
 
+@media screen and (max-width: 1300px) {
+  .payed-in{
+    display: none
+  }
+
+}
 @media screen and (max-width: 1020px) {
   .statement-section-container{
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-
   }
   .non-mobile{
     display: none
@@ -31,5 +36,4 @@
   .name{
     max-width: 15ch;
   }
-
 }

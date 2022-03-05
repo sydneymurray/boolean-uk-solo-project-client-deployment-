@@ -7,7 +7,7 @@ return <>
       <span className="transaction-element non-mobile">{transaction.otherPartiesAccount}</span>
       <span className="transaction-element">{transaction.otherPartiesName}</span>
       <span className="transaction-element non-mobile">{transaction.comments}</span>
-      <span className="transaction-element non-mobile right">{transaction.payedIn}</span>
+      <span className="transaction-element non-mobile right payed-in">{transaction.payedIn}</span>
       <span className="transaction-element right">{transaction.payedOut}</span>
       <span className="transaction-element right">{transaction.balance}</span>
     </article>
