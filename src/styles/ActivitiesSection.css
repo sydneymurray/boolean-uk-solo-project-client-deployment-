@@ -1,3 +1,9 @@
+.activitysection-container{
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .activity-h2{
   margin-top: 1.5ch;
 }
