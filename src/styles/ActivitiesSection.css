@@ -14,8 +14,8 @@
 }
 
 .activity-image:hover{
-  border: 1px solid aqua;
-  transform: scale(1.02);
+  border: 2px solid aqua;
+  transform: scale(1.04);
 }
 
 @media screen and (max-width: 1300px) {
