@@ -18,6 +18,16 @@
   transform: scale(1.02);
 }
 
+@media screen and (max-width: 1300px) {
+  .activity-image{
+    width: 300px;
+    height: 225px;
+  }
+  h2{
+    font-size: 1.1rem;
+  }
+}
+
 @media screen and (max-width: 860px) {
   .activity-image{
     width: 200px;
