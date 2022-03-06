@@ -24,9 +24,9 @@
 
 @media screen and (max-width: 1020px) {
   .account-sidebar-container{
-    width: 100px;
+    width: 1020px;
     padding-left: 1ch;
-    padding-right: 2ch;
+    padding-right: 1ch;
   }
 
   .sidebar-customer-name{
