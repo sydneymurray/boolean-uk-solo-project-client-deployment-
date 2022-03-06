@@ -7,7 +7,9 @@
   height: 70vh;
   border-style: solid;
   border-width: 3px;
-  border-color: lightgray;
+  border-color: rgb(230,230,230);
+  margin-top: 2ch;
+  width:fit-content;
 }
 
 .safe-image{
@@ -21,10 +23,11 @@
   margin-bottom: 2px;
 }
 
+.transaction-header{
+  padding-bottom: 1ch;
+}
+
 @media screen and (max-width: 1300px) {
-  .statement-section-container{
-    width: fit-content;
-  }
   .payed-in{
     display: none
   }
@@ -32,7 +35,6 @@
 }
 @media screen and (max-width: 1020px) {
   .statement-section-container{
-    width: fit-content;
     margin-left: auto;
     margin-right: auto;
   }

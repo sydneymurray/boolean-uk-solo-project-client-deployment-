@@ -6,6 +6,6 @@ export default function styleLoggedInHeader(customer){
     "backgroundColor": "rgb(240, 240, 240)",
     "borderStyle": "solid",
     "borderWidth": "4px",
-    "borderColor": "lightgray"
+    "borderColor": "rgb(230,230,230)"
     }
 }

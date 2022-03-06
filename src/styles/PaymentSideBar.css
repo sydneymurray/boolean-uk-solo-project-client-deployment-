@@ -9,7 +9,7 @@
   grid-gap: 0.8ch;
   border-style: solid;
   border-width: 3px;
-  border-color: lightgray;
+  border-color: rgb(230,230,230);
 }
 
 .payment-sidebar-option{
@@ -37,6 +37,7 @@
 @media screen and (max-width: 480px) {
   .payment-sidebar-container{
     width: 150px;
+    margin-top: 2ch;
   }
 
   .account-h2{

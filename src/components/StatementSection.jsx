@@ -16,7 +16,7 @@ export default function StatementSection(){
 
   return <>
     <section className="statement-section-container" >
-      <article className="transaction">
+      <article className="transaction transaction-header">
         <h4 className="table-heading dark-barkground">Date</h4>
         <h4 className="table-heading dark-barkground non-mobile">Account</h4>
         <h4 className="table-heading dark-barkground name">Name</h4>
