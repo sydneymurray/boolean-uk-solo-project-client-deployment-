@@ -39,19 +39,22 @@
   padding-bottom: 2ch;
 }
 
-@media screen and (max-width: 760px) {
-  .welcome-to{
-    display: none;
-  }
-  .main-header{
-    font-size: 2.2rem;
-  }
+@media screen and (max-width: 1020px) {
   .header-spacer{
     margin: 1ch;
   }
   .header-container{
     padding-left: 1ch;
     padding-right: 1ch;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .welcome-to{
+    display: none;
+  }
+  .main-header{
+    font-size: 2.2rem;
   }
 }  
 
