@@ -15,7 +15,7 @@ export default function StatementSection(){
   let processedStatement = processAccountStatement(accountStatement)
 
   return <>
-    <section className="statement-section-container">
+    <section className="statement-section-container" >
       <article className="transaction">
         <h4 className="table-heading dark-barkground">Date</h4>
         <h4 className="table-heading dark-barkground non-mobile">Account</h4>

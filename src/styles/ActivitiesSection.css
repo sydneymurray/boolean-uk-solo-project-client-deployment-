@@ -1,3 +1,6 @@
+.header-container{
+  background-color: white;
+}
 .activitysection-container{
   max-width: 1400px;
   margin-left: auto;
@@ -5,7 +8,7 @@
 }
 
 .activity-h2{
-  margin-top: 1.5ch;
+  margin-top: 2.5ch;
 }
 
 .activity-item{
@@ -49,7 +52,9 @@
     width: 150px;
     height: 105px;
   }
-  h2{
+
+  .activity-h2{
     font-size: 0.9rem;
+    margin-top: 3.5ch;
   }
 }

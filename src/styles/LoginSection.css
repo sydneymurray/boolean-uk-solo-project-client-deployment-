@@ -3,7 +3,6 @@
   grid-template: 
   ". login-button register-button" auto/
   1fr auto auto;
-  
 }
 
 .loginsection-list{

@@ -1,9 +1,10 @@
 import "../styles/ActivitiesSection.css";
 
 export default function ActivitySection(){
+
   return <>
     <h2 className="activity-h2">We invest your money safely in the following growth business areas</h2>
-    <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+    <p className="separator">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
     <section className="activitysection-container">
       <div className="activity-item">
         <img className="activity-image" src="./images/AITechnology.jfif" alt="" />

@@ -1,9 +1,12 @@
-
 import "../styles/Header.css";
+import useStore from "../hooks/useStore"
+import styleLoggedInHeader from "./styleLoggedInHeader";
 
 export default function Header(){
+
   return <>
-    <section className="header-container">
+    <section className="header-container" 
+	  style={styleLoggedInHeader(useStore(store => store.loggedInCustomer))}>
 
       <svg className="main-logos" 
           version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 

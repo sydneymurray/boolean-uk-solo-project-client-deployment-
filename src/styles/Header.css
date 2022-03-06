@@ -7,6 +7,12 @@
   grid-template-columns: auto, auto, 1fr, auto, auto;
   display: inline;
   padding-bottom: 2ch;
+  padding-top: 5ch;
+  padding-left: 3ch;
+  padding-right: 3ch;
+  margin-top: 20ch;
+  position: relative;
+  bottom: -2ch;
 }
 
 .welcome-to,
@@ -24,7 +30,7 @@
   display: inline;
   width: 60px;
   height: 60px;
-  margin-bottom: -1.2ch;
+  margin-bottom: -1.6ch;
 }
 
 .header-spacer{
@@ -33,7 +39,7 @@
   padding-bottom: 2ch;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
   .welcome-to{
     display: none;
   }
@@ -42,14 +48,20 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 490px) {
   .header-container{
     grid-template-columns: auto,  1fr, auto;
   }
   .header-spacer{
     margin: 0.5ch;
-
   }
-
 }
 
+@media screen and (max-width: 424px) {
+  .header-container{
+    grid-template-columns: 1fr;
+  }
+  .main-logos{
+    display: none
+  }
+}

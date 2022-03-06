@@ -23,6 +23,8 @@ const useStore = create((set, get)=>({
   setAccountStatement: statement => set(() => ({accountStatement: statement})),
   addTransaction: transaction => set(state => ({...state.accountStatement,
     transactions: [transaction, ...state.accountStatement.transactions]})),
+  headerBackGroundColor: "white",
+  setHeaderBackGroundColor: color => set(state => ({headerBackGroundColor: color}))
 }))
 export default useStore
 
