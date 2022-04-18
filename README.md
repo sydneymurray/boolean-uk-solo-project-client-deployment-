@@ -14,5 +14,5 @@ REACT_APP_API_URL = http://backend-location \
 npm run start
 
 ## Notes
-Backend GiyHub located at:- \
+Backend GitHub located at:- \
 https://github.com/sydneymurray/boolean-uk-solo-project-server-deployment
