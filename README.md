@@ -1,6 +1,17 @@
-# Safe - Bank 
-A secure online bank where you can create a secure login and secure accounts, then make payments, transfers and withdrawals. \
-Frontend Hosted at:- https://master--hopeful-dijkstra-3cf32d.netlify.app/ 
+
+# Safe - Bank
+## About
+A secure online bank where you can create a secure login and secure accounts, then make payments, transfers and withdrawals. 
+<p align="center">**** NOT A REAL BANK***</p>
+
+Built using JavaScript, React with the React-Router & CSS for the Front-End.\
+Oh, and I used Zustand for Global State.\
+The Node.JS Back-End is Hosted on Heroku.com and I used the Express-Router to deliver JSON responses, \
+BCrypt for encrypted passwords, JSON-Webtoken for user login authorisation & authentication. \
+I also used Prisma to connect to the PostgreSQL Database that is hosted on Elephantsql.com
+
+<img src="./public/images/App-Screenshot.png" alt="screenshot of my project" width="600px" height = "auto">
+<br><br>
 
 ## How to build this app
 mkdir safe-bank \
@@ -13,6 +24,6 @@ Ensure that your .env files contains:- \
 REACT_APP_API_URL = http://backend-location \
 npm run start
 
-## Notes
+## Please Note
 Backend GitHub located at:- \
 https://github.com/sydneymurray/boolean-uk-solo-project-server-deployment
